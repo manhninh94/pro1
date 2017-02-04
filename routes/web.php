@@ -11,43 +11,43 @@
 |
 */
 
-Route::group(['domain' => 'salevia.com'], function () {
+// Route::group(['domain' => 'salevia.com'], function () {
 
-    Route::group(['prefix'=>'{country}'],function(){
+//     Route::group(['prefix'=>'{country}'],function(){
         Route::get('/test', 'HomeController@test');
         Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);
         Route::get('/category/{category}', ['as'=>'home-category', 'uses'=>'HomeController@category'] );
         Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
         Route::get('/search', 'HomeController@searchProduct');
-    });
+    // });
 
-    Route::get('/test', 'HomeController@test');
-    Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);
-    Route::get('/category/{category}', ['as'=>'home-category', 'uses'=>'HomeController@category'] );
-    Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
-    Route::get('/search', 'HomeController@searchProduct');
+    // Route::get('/test', 'HomeController@test');
+    // Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);
+    // Route::get('/category/{category}', ['as'=>'home-category', 'uses'=>'HomeController@category'] );
+    // Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
+    // Route::get('/search', 'HomeController@searchProduct');
 
 
-});
+// });
 
-Route::group(['domain' => '{subdomain}.salevia.com'], function () {
+// Route::group(['domain' => '{subdomain}.salevia.com'], function () {
 
-    Route::group(['prefix'=>'{country}'],function(){
-        Route::get('/test', 'HomeController@test');
-        Route::get('/', 'HomeController@index');
-        Route::get('/category/{category}', 'HomeController@category');
-        Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
-        Route::get('/filter-price', 'HomeController@filter_price');
-        Route::get('/search', 'HomeController@searchProduct');
-    });
+//     Route::group(['prefix'=>'{country}'],function(){
+//         Route::get('/test', 'HomeController@test');
+//         Route::get('/', 'HomeController@index');
+//         Route::get('/category/{category}', 'HomeController@category');
+//         Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
+//         Route::get('/filter-price', 'HomeController@filter_price');
+//         Route::get('/search', 'HomeController@searchProduct');
+//     });
     
-    Route::get('/test', 'HomeController@test');
-    Route::get('/', 'HomeController@index');
-    Route::get('/category/{category}', 'HomeController@category');
-    Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
-    Route::get('/filter-price', 'HomeController@filter_price');
-    Route::get('/search', 'HomeController@searchProduct');
-});
+//     Route::get('/test', 'HomeController@test');
+//     Route::get('/', 'HomeController@index');
+//     Route::get('/category/{category}', 'HomeController@category');
+//     Route::get('/product-detail/{product_id}', 'HomeController@productDetail');
+//     Route::get('/filter-price', 'HomeController@filter_price');
+//     Route::get('/search', 'HomeController@searchProduct');
+// });
 
    // Route::get('/test', 'HomeController@test');
    // Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);
